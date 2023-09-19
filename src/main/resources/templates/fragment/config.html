@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+        lang="ko"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+
+<th:block th:fragment="configFragment">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="_csrf" th:content="${_csrf?.token}">
+        <meta name="_csrf_header" th:content="${_csrf.headerName}">
+
+        <title th:text="${title}">타이틀</title>
+
+        <!--Google Fonts - 나눔고딕-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+
+        <!-- 공통 css -->
+        <th:block th:replace="common/styles"></th:block>
+
+        <!-- 컨텐츠 페이지의 css -->
+        <th:block layout:fragment="css"></th:block>
+
+        <!-- 공통 js -->
+        <th:block th:replace="common/scripts"></th:block>
+
+        <!-- 컨텐츠 페이지의 js -->
+        <th:block layout:fragment="script"></th:block>
+
+    </head>
+
+</th:block>
+
+</html>

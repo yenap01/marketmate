@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html
+        lang="ko"
+        xmlns:th="http://www.thymeleaf.org"
+>
+<th:block th:fragment="footerFragment">
+
+    <div class="footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_copyright">
+                        <p>Copyright &copy; <span th:text="${#calendars.format(#calendars.createNow(), 'yyy')}">2022</span> Diki. All Rights Reserved.</p>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </div>
+
+</th:block>
+
+</html>
